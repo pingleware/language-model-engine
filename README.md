@@ -3,6 +3,7 @@ Creating a small language model inference engine using OpenGL with CMake involve
 Here’s a high-level approach:
 
 ### Components
+
 1. **OpenGL**: For rendering/visualizing model predictions.
 2. **Machine Learning Framework**: TensorFlow Lite, ONNX, or a custom neural network inference using C/C++.
 3. **CMake**: To manage the project, dependencies, and compilation.
@@ -76,7 +77,7 @@ class ModelInference {
 public:
     ModelInference(const std::string& model_path);
     std::vector<float> run_inference(const std::vector<float>& input_data);
-    
+  
 private:
     Ort::Env env;
     Ort::Session session;
@@ -130,7 +131,7 @@ public:
     OpenGLRenderer();
     ~OpenGLRenderer();
     void render(const std::vector<float>& model_output);
-    
+  
 private:
     GLFWwindow* window;
     void init_opengl();
@@ -229,3 +230,7 @@ make
 ```
 
 This basic setup allows you to perform inference using a machine learning model (such as ONNX or TensorFlow Lite) and visualize the results using OpenGL. The inference engine is structured in a modular way to easily switch between models and visualizations.
+
+#### Download ONNX Runtime
+
+Download the onnxruntime release for your platform from [https://github.com/microsoft/onnxruntime/](https://github.com/microsoft/onnxruntime/releases)releases and unarchive in the onnxruntime directory.
