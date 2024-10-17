@@ -1,2 +1,4 @@
 build
 onnxruntime
+venv/
+__pycache__

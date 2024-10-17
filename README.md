@@ -231,6 +231,19 @@ make
 
 This basic setup allows you to perform inference using a machine learning model (such as ONNX or TensorFlow Lite) and visualize the results using OpenGL. The inference engine is structured in a modular way to easily switch between models and visualizations.
 
+#### 7. Expected Output
+
+From the command line,
+
+```
+Input data shape: (1, 10)
+Output size: 10
+```
+
+and the visualizer,
+
+![1729172983220](image/README/1729172983220.png)
+
 #### Download ONNX Runtime
 
 Download the onnxruntime release for your platform from [https://github.com/microsoft/onnxruntime/](https://github.com/microsoft/onnxruntime/releases)releases and unarchive in the onnxruntime directory.
