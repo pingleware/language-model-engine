@@ -25,11 +25,15 @@ void OpenGLRenderer::init_opengl() {
     }
 
     glfwMakeContextCurrent(window);
-    glewExperimental = true;
-    if (glewInit() != GLEW_OK) {
-        std::cerr << "Failed to initialize GLEW" << std::endl;
-        exit(-1);
+    // After creating an OpenGL context (e.g., after creating a window with GLFW)
+    #ifndef __APPLE__
+    glewExperimental = GL_TRUE; // Make sure that GLEW uses the modern OpenGL
+    GLenum err = glewInit();
+    if (err != GLEW_OK) {
+        std::cerr << "Error initializing GLEW: " << glewGetErrorString(err) << std::endl;
+        return;
     }
+    #endif
 }
 
 void OpenGLRenderer::render(const std::vector<float>& model_output) {
