@@ -2,3 +2,4 @@ build
 onnxruntime
 venv/
 __pycache__
+models/sec

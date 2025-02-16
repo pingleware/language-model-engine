@@ -5,10 +5,11 @@ Creating an ONNX (Open Neural Network Exchange) model involves several steps, in
 Create and activate a python virtual environment
 
 ```
-cd models
+mkdir [model_path]
+cd [model_path]
 python -m venv myenv 
 source myenv/bin/activate
-pip install -r requirements.txt
+pip install -r ../requirements.txt
 ```
 
 #### Step 1: Define Your Model
